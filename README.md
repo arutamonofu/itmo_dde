@@ -25,3 +25,9 @@
 ```bash
 conda env create -f environment.yml
 ```
+
+## Исполнение
+
+```bash
+python main.py
+```

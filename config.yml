@@ -1,0 +1,4 @@
+data:
+  target_chembl: "CHEMBL4822"
+  target_pubchem: "P56817"
+  data_dir: "data"

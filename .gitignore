@@ -1,2 +1,5 @@
 data/
 itmo_dde.code-workspace
+creds.db
+db_test.ipynb
+.env

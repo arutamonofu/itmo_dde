@@ -1,3 +1,5 @@
+# /scripts/data_loader.py
+
 import yaml
 import numpy as np
 import requests
@@ -288,6 +290,7 @@ def main():
     target_chembl_id = config["data"]["target_chembl"]
     target_pubchem_id = config["data"]["target_pubchem"]
     data_dir = Path(config["data"]["data_dir"])
+    data_file = Path(config["data"]["data_file"])
     print("Загрузка конфигурации завершена\n")
 
     # Скачивание
@@ -332,7 +335,7 @@ def main():
 
     print("Сохранение файла...")
     data_dir.mkdir(parents=True, exist_ok=True)
-    df_converted.to_parquet(data_dir / "preprocessed.parquet", index=False)
+    df_converted.to_parquet(data_dir / data_file, index=False)
     print("Сохранение файла завершено")
 
 

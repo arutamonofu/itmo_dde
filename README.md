@@ -34,3 +34,7 @@ conda env create -f environment.yml
 ```bash
 python main.py
 ```
+
+## Просмотр блокнотов
+
+- [Рендер блокнота на Binder](https://mybinder.org/v2/gh/arutamonofu/itmo_dde/9c61655c0bb16bea5ef0107d8162c9126d41f474?urlpath=lab%2Ftree%2Fnotebooks%2FEDA.ipynb)

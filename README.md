@@ -37,11 +37,13 @@ conda env create -f environment.yml
 python etl/main.py
 ```
 
-Запуск с пользовательским файлом конфигурации:
+Запуск с пользовательским файлом конфигурации (yml):
 
 ```bash
-python etl/main.py --config config.yml
+python etl/main.py --config config_50.yml
 ```
+
+Файл `config_50.yml` — демонстрационный пользовательский, в котором размер загружаемой выборки 50 вместо 100.
 
 ## EDA
 

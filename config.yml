@@ -2,6 +2,8 @@ data:
   target_chembl: "CHEMBL4822"
   target_pubchem: "P56817"
   data_dir: "data"
-  data_file: "preprocessed.parquet"
+  data_file_raw_chembl: "raw_chembl.csv"
+  data_file_raw_pubchem: "raw_pubchem.csv"
+  data_file_preprocessed: "preprocessed.parquet"
 db:
   sample_size: 100

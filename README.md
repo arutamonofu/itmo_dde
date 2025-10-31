@@ -23,18 +23,43 @@
 - ChEMBL: https://www.ebi.ac.uk/chembl/ ([документация API](https://www.ebi.ac.uk/chembl/api/data/docs))
 - PubChem: https://pubchem.ncbi.nlm.nih.gov/ ([документация API](https://pubchem.ncbi.nlm.nih.gov/docs/pug-rest-tutorial))
 
-## Установка
+## Установка проекта
 
 ```bash
 conda env create -f environment.yml
 ```
 
-## Исполнение
+## ETL-пайплайн
+
+Запуск с файлом конфигурации по умолчанию (`config.yml`):
 
 ```bash
-python main.py
+python etl/main.py
 ```
 
-## Просмотр блокнотов
+Запуск с пользовательским файлом конфигурации:
 
-- [EDA (рендер на Binder)](https://mybinder.org/v2/gh/arutamonofu/itmo_dde/9c61655c0bb16bea5ef0107d8162c9126d41f474?urlpath=lab%2Ftree%2Fnotebooks%2FEDA.ipynb)
+```bash
+python etl/main.py --config config.yml
+```
+
+## EDA
+
+- [EDA (рендер на Binder с динамическими графиками)](https://mybinder.org/v2/gh/arutamonofu/itmo_dde/9c61655c0bb16bea5ef0107d8162c9126d41f474?urlpath=lab%2Ftree%2Fnotebooks%2FEDA.ipynb)
+
+## Структура проекта
+
+```
+.
+├── config.yml            # Настраивает молекулы, пути, размер выборки для БД
+├── data                  # Сырые и предобработанный датасеты
+├── etl                   
+│   ├── extract.py        # Скачивает из PubChem, ChEMBL
+│   ├── transform.py      # Обрабатывает, объединяет, генерирует дескрипторы
+│   ├── load.py           # Загружает в базу данных
+│   └── main.py           # Главный скрипт-оркестратор
+├── notebooks             
+│   └── EDA.ipynb         # Исследовательский анализ данных
+├── environment.yml       
+└── README.md             
+```

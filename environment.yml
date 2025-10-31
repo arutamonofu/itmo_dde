@@ -129,4 +129,3 @@ dependencies:
       - seaborn==0.13.2
       - sqlalchemy==2.0.44
       - tqdm==4.67.1
-prefix: /home/arutamonofu/miniconda3/envs/itmo_dde
